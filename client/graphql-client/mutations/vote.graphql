@@ -1,0 +1,19 @@
+mutation Vote($inputVoteValue: VoteType!, $postId: Int!){
+    vote(inputVoteValue: $inputVoteValue, postId: $postId){
+       code
+        success
+        message
+        post{
+            id
+            text
+            title
+            createdAt
+            updatedAt
+            points
+        }
+        error{
+            field
+	        message
+        }
+    }
+}
